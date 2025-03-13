@@ -1,0 +1,1 @@
+there is so much beauty in the world. it doesnt need to change or be saved (but it can if it so chooses), and naturally gets protected by those who can see and feel it.
