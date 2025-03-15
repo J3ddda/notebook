@@ -69,12 +69,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "FOMO.md",
+                "file": "index.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "FOMO"
+              "title": "index"
             }
           }
         ],
@@ -151,7 +151,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "FOMO.md",
+                "file": "index.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -161,7 +161,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for FOMO"
+              "title": "Backlinks for index"
             }
           },
           {
@@ -170,12 +170,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "FOMO.md",
+                "file": "index.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from FOMO"
+              "title": "Outgoing links from index"
             }
           },
           {
@@ -199,13 +199,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "FOMO.md",
+                "file": "index.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of FOMO"
+              "title": "Outline of index"
             }
           }
         ]
@@ -228,11 +228,13 @@
   },
   "active": "93da06e824c9eb32",
   "lastOpenFiles": [
+    "[Visit.md",
     "index.md",
+    "hurt.md",
+    "FOMO.md",
     "touch.md",
     "beauty.md",
     "category-folder/Some note.md",
-    "FOMO.md",
     "cake.md",
     "words.md",
     "machine learning.md",
@@ -240,7 +242,6 @@
     "ai.md",
     "edging.md",
     "flirting.md",
-    "hurt.md",
     "IRL cultural experiment.md",
     "horny.md",
     "Egg.md",
@@ -254,7 +255,6 @@
     "songs.md",
     "sex.md",
     "Phone nervous system.md",
-    "periods.md",
     "category-folder"
   ]
 }
