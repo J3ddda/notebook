@@ -7,4 +7,15 @@ Some are my tweets, some are journal entries on specific topics.
 Some are random insights i have while showering.
 All are welcome here.
 Come as you are, be loved as you are.<br>
-"if it feels good, do it" - I teach singing, if you want to fall in love with your own voice [Visit Sonic Spaceship](https://confused-ton-5c4.notion.site/Welcome-Aboard-the-Sonic-Spaceship-17657185b7388061a737de28490d8787)
+"if it feels good, do it" - I teach body awareness through exercises designed to remove personal stigma, at [Visit Sonic Spaceship](https://confused-ton-5c4.notion.site/Welcome-Aboard-the-Sonic-Spaceship-17657185b7388061a737de28490d8787)
+
+
+<br>
+im currently researching:
+
+- How dogma is perpetuated through emotional discourse.
+- How emotions (and therefore ideas) spread through communities.
+- Exploring the concept of why repsect for the body is downplayed alongside cognitive endeavours.
+- My philosophy: dont force.
+
+
