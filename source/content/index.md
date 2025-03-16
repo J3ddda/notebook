@@ -11,11 +11,11 @@ Come as you are, be loved as you are.<br>
 
 
 <br>
-im currently researching:
+I'm currently researching:
 
 - How dogma is perpetuated through emotional discourse.
 - How emotions (and therefore ideas) spread through communities.
-- Exploring the concept of why repsect for the body is downplayed alongside cognitive endeavours.
+- Exploring the concept of why respect for the body is downplayed alongside cognitive endeavours.
 - My philosophy: dont force.
 
 
