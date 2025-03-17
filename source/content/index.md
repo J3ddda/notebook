@@ -19,4 +19,4 @@ I'm currently researching:
 - My philosophy: dont force.
 
 Read more: 
-[substack][https://substack.com/home/post/p-159172509?source=queue]
+[substack][https://open.substack.com/pub/karboncopy/p/the-bodys-beautiful-betrayal?r=1v7xyt&utm_campaign=post&utm_medium=web&showWelcomeOnShare=false]
