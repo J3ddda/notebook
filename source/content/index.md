@@ -18,4 +18,5 @@ I'm currently researching:
 - Exploring the concept of why respect for the body is downplayed alongside cognitive endeavours.
 - My philosophy: dont force.
 
-
+Read more: 
+[substack][https://substack.com/home/post/p-159172509?source=queue]
