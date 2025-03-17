@@ -1,0 +1,1 @@
+Formable memories an be used as loopholes for making life easier.
