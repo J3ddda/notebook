@@ -34,8 +34,9 @@ Read more:
 [substack](https://open.substack.com/pub/karboncopy/p/the-bodys-beautiful-betrayal?r=1v7xyt&utm_campaign=post&utm_medium=web&showWelcomeOnShare=false)
 
 <h3>morals</h3>
-- tangable.
+- tangable
 - alive
 - changing
+- respectful
 <br>
 
