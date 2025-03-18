@@ -23,6 +23,7 @@ Come as you are, be loved as you are.<br>
 
 - Yoga that teaches people not only body positions in systemic approaches to belief but the belief that the body is a complex navigator and can and does help us daily. - use radio signals to align posture/position to music, so when you do a yoga pose the move to the position is static but the position itself creates a radio signal sound (music etc). you get to know the position and your body (win-win).
 - People to gain greater clarity and agency over their bodies to make informed decisions. 
+- dyslexic books that lean into what the brain sees when you have dyslexia. A book that looks like what my brain wants to focus on; the spaces between the words, the bright circles surrounding each letter and the ability to read even when the letters are not arranged traditional ways.<br>
   
 <h1>How this research will help:</h1>
 - creates a sense of agency that allows people to speak up about injustices in a safe and productive way (the thing stopping you from speaking up might be mostly fear of being reprimanded, or fear the thing thats happening is gunna happen to you, but when we speak up we notice we arnt alone, we tend to outnumber those who hide in shame 10-1)<br><br>
@@ -31,4 +32,10 @@ Come as you are, be loved as you are.<br>
 
 Read more:  
 [substack](https://open.substack.com/pub/karboncopy/p/the-bodys-beautiful-betrayal?r=1v7xyt&utm_campaign=post&utm_medium=web&showWelcomeOnShare=false)
+
+<h3>morals</h3>
+- tangable.
+- alive
+- changing
+<br>
 
