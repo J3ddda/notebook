@@ -29,5 +29,6 @@ Come as you are, be loved as you are.<br>
 - help ease the pressure of doctors and the wait time to see said doctors especially in ER hospital as people will *know* if they are sick or just feeling intense emotions.<br>
 - you get to know the position of your mind and your body (win-win), if people trust their body there will automatically be trust in life (and others) as a fix/alignment in one area often causes compounding in all areas (memetics)
 
-Read more: 
-[substack][https://open.substack.com/pub/karboncopy/p/the-bodys-beautiful-betrayal?r=1v7xyt&utm_campaign=post&utm_medium=web&showWelcomeOnShare=false]
+Read more:  
+[substack](https://open.substack.com/pub/karboncopy/p/the-bodys-beautiful-betrayal?r=1v7xyt&utm_campaign=post&utm_medium=web&showWelcomeOnShare=false)
+
