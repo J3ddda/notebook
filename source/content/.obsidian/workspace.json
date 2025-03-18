@@ -97,12 +97,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "heartache.md",
+                "file": "feelings.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "heartache"
+              "title": "feelings"
             }
           }
         ],
@@ -256,7 +256,13 @@
   },
   "active": "e85669797a01696e",
   "lastOpenFiles": [
+    "finding.md",
+    "flirting.md",
+    "FOMO.md",
+    "hearing.md",
+    "[[.md",
     "heart.md",
+    "heartache.md",
     "horny.md",
     "hurt.md",
     "index.md",
@@ -276,12 +282,6 @@
     "tech turns me on.md",
     "superposition.md",
     "spectrum.md",
-    "[Visit.md",
-    "FOMO.md",
-    "beauty.md",
-    "category-folder/Some note.md",
-    "cake.md",
-    "ai.md",
     "spirit",
     "category-folder"
   ]
