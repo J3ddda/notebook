@@ -97,12 +97,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "dreams.md",
+                "file": "body.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "dreams"
+              "title": "body"
             }
           }
         ],
@@ -257,6 +257,7 @@
   "active": "e85669797a01696e",
   "lastOpenFiles": [
     "cake.md",
+    "dreams.md",
     "edging.md",
     "emotions.md",
     "feelings.md",
@@ -281,7 +282,6 @@
     "Untitled.md",
     "true furfillment.md",
     "touch.md",
-    "time.md",
     "spirit",
     "category-folder"
   ]
