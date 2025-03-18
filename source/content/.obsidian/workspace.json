@@ -97,12 +97,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "body.md",
+                "file": "ascension (not religious).md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "body"
+              "title": "ascension (not religious)"
             }
           }
         ],
@@ -254,8 +254,11 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "e85669797a01696e",
+  "active": "b77831b90dd9f87b",
   "lastOpenFiles": [
+    "beauty.md",
+    "ascension (not religious).md",
+    "body.md",
     "cake.md",
     "dreams.md",
     "edging.md",
@@ -279,9 +282,6 @@
     "ocean.md",
     "past lives.md",
     "words.md",
-    "Untitled.md",
-    "true furfillment.md",
-    "touch.md",
     "spirit",
     "category-folder"
   ]
