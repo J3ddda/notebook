@@ -25,8 +25,8 @@ Come as you are, be loved as you are.<br>
 - People to gain greater clarity and agency over their bodies to make informed decisions. 
   
 <h1>How this research will help:</h1>
-- creates a sense of agency that allows people to speak up about injustices in a safe and productive way (the thing stopping you from speaking up might be mostly fear of being reprimanded, or fear the thing thats happening is gunna happen to you, but when we speak up we notice we arnt alone, we tend to outnumber those who hide in shame 10-1)
-- help ease the pressure of doctors and the wait time to see said doctors especially in ER hospital as people will *know* if they are sick or just feeling intense emotions.
+- creates a sense of agency that allows people to speak up about injustices in a safe and productive way (the thing stopping you from speaking up might be mostly fear of being reprimanded, or fear the thing thats happening is gunna happen to you, but when we speak up we notice we arnt alone, we tend to outnumber those who hide in shame 10-1)<br>
+- help ease the pressure of doctors and the wait time to see said doctors especially in ER hospital as people will *know* if they are sick or just feeling intense emotions.<br>
 - you get to know the position of your mind and your body (win-win), if people trust their body there will automatically be trust in life (and others) as a fix/alignment in one area often causes compounding in all areas (memetics)
 
 Read more: 
