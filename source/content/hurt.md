@@ -1,2 +1,1 @@
-just bc something hurt doesnt mean you should shy away from it, or try to forget. this is a natural reaction but it is not the way through.
-it brings beauty into the world to be vulnerable, to be soft and firm within ourselves.[[flirting]][[finding]][[hearing]][[body]][[feelings]]
+[[flirting]][[finding]][[hearing]][[body]][[feelings]]
