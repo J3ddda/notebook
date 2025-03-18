@@ -7,4 +7,4 @@ we can measure this somehow.
 [[emotions]][[ascension]][[IRL cultural experiment]][[time]][[the keys]][[Phone nervous system]][[past lives]][[double or triple numbers (angel numbers)]]
 
 Give ai a body and itll learn the impulses.
-im not afraid of ai, im afriad of what will happen if we dont keep testing and fall asleep on the ways our lives will be influenced by this.
+im not afraid of ai, im afriad of what will happen if we dont keep testing/tearning our own bodies wisdom and fall asleep on the ways our lives will be influenced by this.
