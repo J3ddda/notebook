@@ -2,6 +2,8 @@
 title: research
 ---
 <h2>"do it with heart, for the love of the craft"</h2>
+View source of quote: [here](https://x.com/vidhvatm/status/1902271435663667458) <br><hr>
+
 hello hi hey, this is my notebook of ideas.
 Some are my tweets, some are journal entries on specific topics.
 Some are random insights i have while showering.
