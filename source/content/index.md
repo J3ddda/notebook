@@ -19,6 +19,7 @@ Come as you are, be loved as you are.<br>
 - How emotions (and therefore ideas) spread through communities.
 - Exploring the concept of why respect for the body is downplayed alongside cognitive endeavours.
 - How eugenic principles are ending up in data collection and how to best *stop* that from happening and discontinuing harmful bias.
+- the human body and its innate intelligence
 
 <h2>My philosophy: dont force.</h2>
 
