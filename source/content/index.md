@@ -2,6 +2,7 @@
 title: research
 ---
 <h2>"do it with heart, for the love of the craft"</h2>
+<br>
 View source of quote: [here](https://x.com/vidhvatm/status/1902271435663667458)
 <hr>
 
@@ -11,6 +12,8 @@ Some are random insights i have while showering.
 All are welcome here.
 Come as you are, be loved as you are.<br>
 "if it feels good, do it" - I teach body awareness through singing exercises designed to remove personal stigma at [Visit Sonic Spaceship](https://confused-ton-5c4.notion.site/Welcome-Aboard-the-Sonic-Spaceship-17657185b7388061a737de28490d8787)
+
+
 
 
 <br>
@@ -29,6 +32,7 @@ Come as you are, be loved as you are.<br>
 - People to gain greater clarity and agency over their bodies to make informed decisions. 
 - dyslexic books that lean into what the brain sees when you have dyslexia. A book that looks like what my brain wants to focus on; the spaces between the words, the bright circles surrounding each letter and the ability to read even when the letters are not arranged traditional ways.
 - The "black/white", "nighttime/daytime" button on this site to be able to be coloured (like i want a coloured background, not just light and dark bc life isnt just light and dark, there are also dawn and dust, midday and middnight, sunrise and sunset and they all look different and i want my site to reflect that and change...or someone to have a colour picker to change it to a colour that best suits their mood at the time, and have that change, as their mood/frame of mind does) Who's making this or can walk me though it? - i wanna learn, teach me oh jedi!!(and dont say chatgpt bc thats no fun, the point here is socialisation and learning together okay? its a win-win, get it? good.)<br>
+- dating app that that funds itself my being honest abut selling data and allowing their members to choose what data they disclose and sell for profit, so they dont have to ask their customers for money to connect with each other (controversial i know).
   
 <h1>How this research will help:</h1>
 - creates a sense of agency that allows people to speak up about injustices in a safe and productive way (the thing stopping you from speaking up might be mostly fear of being reprimanded, or fear the thing thats happening is gunna happen to you, but when we speak up we notice we arnt alone, we tend to outnumber those who hide in shame 10-1)<br><br>
