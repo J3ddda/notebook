@@ -1,16 +1,91 @@
-<h1>
-	Raw HTML example
-</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game of Life</title>
+    <style>
+        body { display: flex; height: 100vh; justify-content: center; align-items: center; margin: 0; background: #b40ff1; }
+        canvas { border: 1px solid #ffffff; background: #000000; }
+    </style>
+</head>
+<body>
+    <canvas id="gameCanvas"></canvas>
+    <script>
+        const canvas = document.getElementById('gameCanvas');
+        const ctx = canvas.getContext('2d');
 
-<p>Hello!</p>
+        const CELL_SIZE = 10;
+        const WIDTH = 80;
+        const HEIGHT = 60;
+        const ALIVE_COLOR = '#ffffff';
+        const DEAD_COLOR = '#000000';
 
-<button id="button">Click me to add text to the page</button>
-<div id="text-container"></div>
+        canvas.width = WIDTH * CELL_SIZE;
+        canvas.height = HEIGHT * CELL_SIZE;
 
+        let grid = createGrid();
+        randomizeGrid();
 
-<script type="text/javascript">
-	document.querySelector("#button").onclick = () => {
-		document.querySelector("#text-container").innerHTML += 
-		`<p>The time is now ${new Date().toString()}</p>`	
-	}
-</script>
+        function createGrid() {
+            return Array.from({ length: HEIGHT }, () => Array(WIDTH).fill(0));
+        }
+
+        function randomizeGrid() {
+            for (let row = 0; row < HEIGHT; row++) {
+                for (let col = 0; col < WIDTH; col++) {
+                    grid[row][col] = Math.random() > 0.7 ? 1 : 0;
+                }
+            }
+        }
+
+        function drawGrid() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            for (let row = 0; row < HEIGHT; row++) {
+                for (let col = 0; col < WIDTH; col++) {
+                    ctx.fillStyle = grid[row][col] ? ALIVE_COLOR : DEAD_COLOR;
+                    ctx.fillRect(col * CELL_SIZE, row * CELL_SIZE, CELL_SIZE, CELL_SIZE);
+                }
+            }
+        }
+
+        function getNextGeneration() {
+            const newGrid = createGrid();
+            for (let row = 0; row < HEIGHT; row++) {
+                for (let col = 0; col < WIDTH; col++) {
+                    const aliveNeighbors = countAliveNeighbors(row, col);
+                    if (grid[row][col]) {
+                        newGrid[row][col] = aliveNeighbors === 2 || aliveNeighbors === 3 ? 1 : 0;
+                    } else {
+                        newGrid[row][col] = aliveNeighbors === 3 ? 1 : 0;
+                    }
+                }
+            }
+            grid = newGrid;
+        }
+
+        function countAliveNeighbors(row, col) {
+            let count = 0;
+            for (let i = -1; i <= 1; i++) {
+                for (let j = -1; j <= 1; j++) {
+                    if (i === 0 && j === 0) continue;
+                    const newRow = row + i;
+                    const newCol = col + j;
+                    if (newRow >= 0 && newRow < HEIGHT && newCol >= 0 && newCol < WIDTH) {
+                        count += grid[newRow][newCol];
+                    }
+                }
+            }
+            return count;
+        }
+
+        function gameLoop() {
+            drawGrid();
+            getNextGeneration();
+            requestAnimationFrame(gameLoop);
+        }
+
+        gameLoop();
+    </script>
+</body>
+</html>
