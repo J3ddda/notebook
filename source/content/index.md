@@ -4,6 +4,9 @@ title: research
 <h2>"do it with heart, for the love of the craft"</h2>
 <br>
 from: [here](https://x.com/vidhvatm/status/1902271435663667458)
+
+<br>
+
 <hr>
 
 hello hi hey, this is my notebook of ideas.
@@ -15,8 +18,7 @@ Come as you are, be loved as you are.<br>
 
 
 
-
-<br>
+Date me? [click here](https://cuties.app/profile/franklin-1742733101892x813177518641711600)<br>
 <h1>I'm currently fascinated by:</h1>
 
 - How emotions (and therefore ideas) spread through communities.
