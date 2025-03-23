@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Game of Life</title>
     <style>
-        body { display: flex; height: 100vh; justify-content: center; align-items: center; margin: 0; background: #b40ff1; }
+        body { display: flex; height: 100vh; justify-content: center; align-items: center; margin: 0; background: #121212; }
         canvas { border: 1px solid #ffffff; background: #000000; }
     </style>
 </head>
@@ -25,6 +25,7 @@
         canvas.height = HEIGHT * CELL_SIZE;
 
         let grid = createGrid();
+        let isPaused = false;
         randomizeGrid();
 
         function createGrid() {
@@ -80,12 +81,22 @@
         }
 
         function gameLoop() {
-            drawGrid();
-            getNextGeneration();
+            if (!isPaused) {
+                drawGrid();
+                getNextGeneration();
+            }
             requestAnimationFrame(gameLoop);
         }
+
+        window.addEventListener('keydown', (event) => {
+            if (event.code === 'Space') {
+                isPaused = !isPaused;
+            }
+        });
 
         gameLoop();
     </script>
 </body>
 </html>
+
+

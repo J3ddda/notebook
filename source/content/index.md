@@ -7,10 +7,8 @@ title: research
 
 from: [here](https://x.com/vidhvatm/status/1902271435663667458)
 
+---------------------------
 
-<br>
-
-<hr>
 
 hello hi hey, this is my notebook of ideas.
 Some are my tweets, some are journal entries on specific topics.
@@ -22,7 +20,7 @@ Come as you are, be loved as you are.<br>
 
 
 Date me? [click here](https://cuties.app/profile/franklin-1742733101892x813177518641711600)<br>
-<h1>I'm currently fascinated by:</h1>
+### I'm currently fascinated by:
 
 - How emotions (and therefore ideas) spread through communities.
 - Exploring the concept of why respect for the body is downplayed alongside cognitive endeavours.
