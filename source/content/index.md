@@ -1,9 +1,10 @@
 ---
 title: research
 ---
-<h2>"do it with heart, for the love of the craft"</h2>
-<br>
-dsdjfadna,jfakhdskgns/ldfma
+
+## "do it with heart, for the love of the craft"
+
+
 from: [here](https://x.com/vidhvatm/status/1902271435663667458)
 
 
