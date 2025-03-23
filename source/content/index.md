@@ -3,7 +3,9 @@ title: research
 ---
 <h2>"do it with heart, for the love of the craft"</h2>
 <br>
-from: (https://x.com/vidhvatm/status/1902271435663667458)
+from: [here
+](https://x.com/vidhvatm/status/1902271435663667458)
+https://x.com/vidhvatm/status/1902271435663667458
 
 <br>
 
