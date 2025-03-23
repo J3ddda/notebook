@@ -18,7 +18,6 @@
         const CELL_SIZE = 10;
         const WIDTH = 80;
         const HEIGHT = 60;
-        const ALIVE_COLOR = '#ffffff';
         const DEAD_COLOR = '#000000';
 
         canvas.width = WIDTH * CELL_SIZE;
@@ -26,6 +25,11 @@
 
         let grid = createGrid();
         let isPaused = false;
+        let colorIndex = 0;
+        const rainbowColors = [
+            '#FF9A8B', '#FF6A88', '#FF99AC', '#FF85A1', '#FC6C85',
+            '#E377C2', '#A377F2', '#6B8CF2', '#4BC0C8', '#56CCF2'
+        ];
         randomizeGrid();
 
         function createGrid() {
@@ -44,7 +48,7 @@
             ctx.clearRect(0, 0, canvas.width, canvas.height);
             for (let row = 0; row < HEIGHT; row++) {
                 for (let col = 0; col < WIDTH; col++) {
-                    ctx.fillStyle = grid[row][col] ? ALIVE_COLOR : DEAD_COLOR;
+                    ctx.fillStyle = grid[row][col] ? rainbowColors[colorIndex % rainbowColors.length] : DEAD_COLOR;
                     ctx.fillRect(col * CELL_SIZE, row * CELL_SIZE, CELL_SIZE, CELL_SIZE);
                 }
             }
@@ -63,6 +67,7 @@
                 }
             }
             grid = newGrid;
+            colorIndex++;
         }
 
         function countAliveNeighbors(row, col) {
@@ -98,5 +103,4 @@
     </script>
 </body>
 </html>
-
 
