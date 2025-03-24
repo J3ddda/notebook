@@ -26,16 +26,28 @@
         let grid = createGrid();
         let isPaused = false;
         let hue = 0;
-        randomizeGrid();
+
+        const crabImage = new Image();
+        crabImage.src = 'assets/crab.jpeg';
+        crabImage.onload = () => drawCrabImage();
 
         function createGrid() {
             return Array.from({ length: HEIGHT }, () => Array(WIDTH).fill(0));
         }
 
-        function randomizeGrid() {
+        function drawCrabImage() {
+            const tempCanvas = document.createElement('canvas');
+            const tempCtx = tempCanvas.getContext('2d');
+            tempCanvas.width = WIDTH;
+            tempCanvas.height = HEIGHT;
+            tempCtx.drawImage(crabImage, 0, 0, WIDTH, HEIGHT);
+            const imageData = tempCtx.getImageData(0, 0, WIDTH, HEIGHT).data;
+
             for (let row = 0; row < HEIGHT; row++) {
                 for (let col = 0; col < WIDTH; col++) {
-                    grid[row][col] = Math.random() > 0.7 ? 1 : 0;
+                    const index = (row * WIDTH + col) * 4;
+                    const brightness = (imageData[index] + imageData[index + 1] + imageData[index + 2]) / 3;
+                    grid[row][col] = brightness < 128 ? 1 : 0; // Darker pixels become "alive"
                 }
             }
         }
