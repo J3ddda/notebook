@@ -25,11 +25,7 @@
 
         let grid = createGrid();
         let isPaused = false;
-        let colorIndex = 0;
-        const rainbowColors = [
-            '#FF9A8B', '#FF6A88', '#FF99AC', '#FF85A1', '#FC6C85',
-            '#E377C2', '#A377F2', '#6B8CF2', '#4BC0C8', '#56CCF2'
-        ];
+        let hue = 0;
         randomizeGrid();
 
         function createGrid() {
@@ -48,7 +44,7 @@
             ctx.clearRect(0, 0, canvas.width, canvas.height);
             for (let row = 0; row < HEIGHT; row++) {
                 for (let col = 0; col < WIDTH; col++) {
-                    ctx.fillStyle = grid[row][col] ? rainbowColors[colorIndex % rainbowColors.length] : DEAD_COLOR;
+                    ctx.fillStyle = grid[row][col] ? `hsl(${hue}, 100%, 70%)` : DEAD_COLOR;
                     ctx.fillRect(col * CELL_SIZE, row * CELL_SIZE, CELL_SIZE, CELL_SIZE);
                 }
             }
@@ -67,7 +63,7 @@
                 }
             }
             grid = newGrid;
-            colorIndex++;
+            hue = (hue + 10) % 360;
         }
 
         function countAliveNeighbors(row, col) {
