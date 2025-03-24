@@ -27,9 +27,11 @@ Date me? [click here](https://cuties.app/profile/franklin-1742733101892x81317751
 - How eugenic principles are ending up in data collection and how to best *stop* that from happening and discontinuing harmful bias.
 - the human body and its innate intelligence
 
-<h2>My philosophy: dont force.</h2>
+## My philosophy: dont force.
 
-<h1>What i want more of:</h1>
+
+
+# What i want more of:
 
 - Yoga that teaches people not only body positions in systemic approaches to belief but the belief that the body is a complex navigator and can and does help us daily. - use radio signals to align posture/position to music, so when you do a yoga pose the move to the position is static but the position itself creates a radio signal sound (music etc). you get to know the position and your body (win-win).
 - People to gain greater clarity and agency over their bodies to make informed decisions. 
