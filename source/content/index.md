@@ -5,7 +5,7 @@ title: Welcome home
 ## "do it with heart, for the love of the craft"
 
 
-from: [here](https://x.com/vidhvatm/status/1902271435663667458)
+[source](https://x.com/vidhvatm/status/1902271435663667458)
 
 ---------------------------
 
