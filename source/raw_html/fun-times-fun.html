@@ -16,8 +16,8 @@
         const ctx = canvas.getContext('2d');
 
         const CELL_SIZE = 20;
-        const WIDTH = 40;
-        const HEIGHT = 30;
+        const WIDTH = 20;
+        const HEIGHT = 15;
         const PLAYER_COLOR = '#00FF00';
         const WALL_COLOR = '#8B4513';
         const FLOOR_COLOR = '#333333';
@@ -26,23 +26,21 @@
         canvas.width = WIDTH * CELL_SIZE;
         canvas.height = HEIGHT * CELL_SIZE;
 
-        const grid = createGrid();
+        let grid = createGrid();
         const player = { x: 1, y: 1 };
         const exit = { x: WIDTH - 2, y: HEIGHT - 2 };
 
         function createGrid() {
             const grid = Array.from({ length: HEIGHT }, () => Array(WIDTH).fill(1));
 
-            // Create simple pathways (randomized walls and floor)
             for (let row = 1; row < HEIGHT - 1; row++) {
                 for (let col = 1; col < WIDTH - 1; col++) {
-                    grid[row][col] = Math.random() > 0.2 ? 0 : 1;
+                    grid[row][col] = Math.random() > 0.3 ? 0 : 1;  // Pathways
                 }
             }
 
-            // Ensure player and exit positions are clear
-            grid[player.y][player.x] = 0;
-            grid[exit.y][exit.x] = 0;
+            grid[player.y][player.x] = 0; // Clear player start
+            grid[exit.y][exit.x] = 0; // Clear exit
             return grid;
         }
 
@@ -67,9 +65,12 @@
         function movePlayer(dx, dy) {
             const newX = player.x + dx;
             const newY = player.y + dy;
-            if (newX >= 0 && newX < WIDTH && newY >= 0 && newY < HEIGHT && grid[newY][newX] === 0) {
-                player.x = newX;
-                player.y = newY;
+
+            if (newX >= 0 && newX < WIDTH && newY >= 0 && newY < HEIGHT) {
+                if (grid[newY][newX] === 0) {
+                    player.x = newX;
+                    player.y = newY;
+                }
 
                 if (player.x === exit.x && player.y === exit.y) {
                     alert("You found the exit! 🎉");
@@ -84,11 +85,18 @@
                 case 'ArrowDown': movePlayer(0, 1); break;
                 case 'ArrowLeft': movePlayer(-1, 0); break;
                 case 'ArrowRight': movePlayer(1, 0); break;
+                default:
+                    console.log(`Invalid key pressed: ${event.key}`);
             }
             drawGrid();
         });
 
-        drawGrid();
+        function gameLoop() {
+            drawGrid();
+            requestAnimationFrame(gameLoop);
+        }
+
+        gameLoop();
     </script>
 </body>
 </html>
