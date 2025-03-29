@@ -5,56 +5,172 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>The Ritual of Return</title>
   <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-color: #fdfcf9;
+      --text-color: #333;
+      --border-color: #ccc;
+      --input-bg: #fdfcf9;
+    }
 
+    body.dark-mode {
+      --bg-color: #1a1a1a;
+      --text-color: #f5f5f5;
+      --border-color: #444;
+      --input-bg: #2a2a2a;
+    }
+
+    body {
+      font-family: 'EB Garamond', serif;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      margin: 0;
+      padding: 2rem;
+      line-height: 1.7;
+      max-width: 1000px;
+      margin-left: auto;
+      margin-right: auto;
+      transition: background-color 0.5s ease, color 0.5s ease;
+    }
+
+    h1, h2, h3 {
+      font-weight: normal;
+    }
+
+    h1 {
+      font-size: 2.4rem;
+      margin-bottom: 1rem;
+    }
+
+    h2 {
+      font-size: 1.6rem;
+      margin-top: 2rem;
+    }
+
+    h3 {
+      font-size: 1.2rem;
+      margin-top: 0;
+      margin-bottom: 0.5rem;
+    }
+
+    .section {
+      margin-bottom: 2.5rem;
+    }
+
+    textarea {
+      width: 100%;
+      height: 120px;
+      padding: 0.8rem;
+      font-family: 'EB Garamond', serif;
+      font-size: 1rem;
+      border: 1px solid var(--border-color);
+      background: var(--input-bg);
+      color: var(--text-color);
+      resize: vertical;
+      transition: background 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+    }
+
+    .footer {
+      margin-top: 4rem;
+      font-size: 0.9rem;
+      color: var(--text-color);
+      transition: color 0.3s ease;
+    }
+
+    .toggle-container {
+      text-align: right;
+      margin-bottom: 1rem;
+    }
+
+    .toggle-button {
+      background: none;
+      border: 1px solid var(--border-color);
+      padding: 0.3rem 0.8rem;
+      font-family: 'EB Garamond', serif;
+      font-size: 1rem;
+      cursor: pointer;
+      color: var(--text-color);
+      background-color: var(--input-bg);
+      transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+    }
+
+    .value-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-top: 3rem;
+    }
+
+    .value-item {
+      flex: 1 1 calc(33.333% - 1rem);
+      box-sizing: border-box;
+      border: 1px solid var(--border-color);
+      padding: 1rem;
+      background: var(--input-bg);
+      transition: background 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+    }
+
+    @media (max-width: 768px) {
+      .value-item {
+        flex: 1 1 calc(50% - 1rem);
+      }
+    }
+
+    @media (max-width: 500px) {
+      .value-item {
+        flex: 1 1 100%;
+      }
+    }
+  </style>
 </head>
 <body>
-  <div class="main-content">
-    <div class="toggle-container">
-      <button class="toggle-button" onclick="toggleDarkMode()">Toggle Dark Mode</button>
+  <div class="toggle-container">
+    <button class="toggle-button" onclick="toggleDarkMode()">Toggle Dark Mode</button>
+  </div>
+
+  <h1>The Ritual of Return</h1>
+  <p><em>A daily journal to remember, re-center, and rehumanize myself.</em></p>
+
+  <h2>My Living Values</h2>
+  <div class="value-list">
+    <div class="value-item">
+      <h3>Emotional Integrity</h3>
+      <p>I honor the truth of my feelings, even when they are inconvenient. I believe emotions are intelligent, not irrational.</p>
     </div>
-
-    <h1>The Ritual of Return</h1>
-    <p><em>A daily journal to remember, re-center, and rehumanize myself.</em></p>
-
-    <div class="value-list">
-      <h2>My Living Values</h2>
-      <div class="value-item">
-        <h3>Emotional Integrity</h3>
-        <p>I honor the truth of my feelings, even when they are inconvenient. I believe emotions are intelligent, not irrational.</p>
-      </div>
-      <div class="value-item">
-        <h3>Self-Remembrance</h3>
-        <p>I return to myself daily, not because I’m lost—but because the world tries to make me forget who I am.</p>
-      </div>
-      <div class="value-item">
-        <h3>Mutual Respect</h3>
-        <p>I do not force others to understand me, nor do I allow myself to be diminished. All real connection begins with respect.</p>
-      </div>
-      <div class="value-item">
-        <h3>Radical Curiosity</h3>
-        <p>I let questions breathe. I do not rush to closure. I believe confusion is a form of clarity in motion.</p>
-      </div>
-      <div class="value-item">
-        <h3>Embodied Wisdom</h3>
-        <p>I trust my body’s knowing. What I feel in my chest, gut, and breath is not noise—it’s guidance.</p>
-      </div>
-      <div class="value-item">
-        <h3>Boundaried Openness</h3>
-        <p>I am open—but not porous. I listen deeply, but I do not betray myself to keep peace.</p>
-      </div>
-      <div class="value-item">
-        <h3>Creative Sovereignty</h3>
-        <p>My ideas, words, and insights are mine to shape, not mine to surrender for approval or belonging.</p>
-      </div>
+    <div class="value-item">
+      <h3>Self-Remembrance</h3>
+      <p>I return to myself daily, not because I’m lost—but because the world tries to make me forget who I am.</p>
     </div>
-
-    <div class="footer">
-      This is my ritual. I return to myself with each breath.   <a href="https://j3ddda.github.io/notebook/home">Open Obsidian notebook here</a>
+    <div class="value-item">
+      <h3>Mutual Respect</h3>
+      <p>I do not force others to understand me, nor do I allow myself to be diminished. All real connection begins with respect.</p>
+    </div>
+    <div class="value-item">
+      <h3>Radical Curiosity</h3>
+      <p>I let questions breathe. I do not rush to closure. I believe confusion is a form of clarity in motion.</p>
+    </div>
+    <div class="value-item">
+      <h3>Embodied Wisdom</h3>
+      <p>I trust my body’s knowing. What I feel in my chest, gut, and breath is not noise—it’s guidance.</p>
+    </div>
+    <div class="value-item">
+      <h3>Boundaried Openness</h3>
+      <p>I am open—but not porous. I listen deeply, but I do not betray myself to keep peace.</p>
+    </div>
+    <div class="value-item">
+      <h3>Creative Sovereignty</h3>
+      <p>My ideas, words, and insights are mine to shape, not mine to surrender for approval or belonging.</p>
     </div>
   </div>
 
+  <div class="footer">
+    This is my ritual. I return to myself with each breath.
+  </div>
 
-
+  <script>
+    function toggleDarkMode() {
+      document.body.classList.toggle('dark-mode');
+    }
+  </script>
 </body>
 </html>
-
