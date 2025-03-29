@@ -2,31 +2,131 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Your Name</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mindmap of Group Dynamics</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.4/d3.min.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      margin: 0;
+      padding: 0;
+    }
+    svg {
+      width: 100vw;
+      height: 100vh;
+    }
+    .node circle {
+      fill: #99ccff;
+      stroke: #336699;
+      stroke-width: 1.5px;
+    }
+    .node text {
+      font-size: 14px;
+      pointer-events: none;
+    }
+    .link {
+      fill: none;
+      stroke: #999;
+      stroke-opacity: 0.6;
+      stroke-width: 1.5px;
+    }
+  </style>
 </head>
 <body>
-  <div class="color-picker">
-    <label for="baseColor">🎨 Pick a base color:</label>
-    <input type="color" id="baseColor" name="baseColor" value="#007acc" />
-    <button id="randomColorBtn">🎲 Random Color</button>
-  </div>
-  
+  <svg></svg>
+  <script>
+    const data = {
+      name: "Mindmap",
+      children: [
+        {
+          name: "Control Techniques",
+          children: [
+            { name: "Pathologizing Dissent" },
+            { name: "Delegating Critics" },
+            { name: "Framing Objections as Misalignment" },
+            { name: "Over-intellectualizing Emotions" },
+            { name: "Withholding Emotional Engagement" }
+          ]
+        },
+        {
+          name: "Linguistic Framing",
+          children: [
+            { name: "Techno-utopian Language" },
+            { name: "Ambiguous Terms like 'Alignment'" },
+            { name: "Reframing Coercion as 'Care'" },
+            { name: "Using Jargon to Deflect Critique" },
+            { name: "Minimizing Emotional Language" }
+          ]
+        },
+        {
+          name: "Power Dynamics",
+          children: [
+            { name: "Soft Authoritarianism" },
+            { name: "Centralized Epistemic Authority" },
+            { name: "Gatekeeping via Jargon" },
+            { name: "Assumption of Moral/Intellectual Superiority" }
+          ]
+        },
+        {
+          name: "Social Manipulation",
+          children: [
+            { name: "Selective Responsiveness" },
+            { name: "Performative Openness" },
+            { name: "Disempowering Autonomy via 'Optimized Systems'" },
+            { name: "Ignoring Ethical Questions" }
+          ]
+        },
+        {
+          name: "Emotional Avoidance",
+          children: [
+            { name: "Detachment from Vulnerability" },
+            { name: "Redirection Instead of Reflection" },
+            { name: "Devaluing Emotional Intelligence" },
+            { name: "Using Rationalism as a Shield" }
+          ]
+        }
+      ]
+    };
 
-  <div class="container">
-    <h1>Your Name</h1>
-    <p>I make things with code. Curious about the universe, passionate about making sense of complexity.</p>
-    <div class="links">
-      <a href="mailto:you@example.com">Email</a>
-      <a href="https://github.com/yourusername" target="_blank">GitHub</a>
-      <a href="https://twitter.com/yourhandle" target="_blank">Twitter</a>
-      <a href="https://yourblog.com" target="_blank">Blog</a>
-    </div>
-  </div>
+    const width = window.innerWidth;
+    const height = window.innerHeight;
 
+    const root = d3.hierarchy(data);
 
-  <script src="script.js"></script>
+    const treeLayout = d3.tree().size([height - 100, width - 200]);
+    treeLayout(root);
+
+    const svg = d3.select("svg")
+      .append("g")
+      .attr("transform", "translate(100,50)");
+
+    svg.selectAll(".link")
+      .data(root.links())
+      .enter()
+      .append("path")
+      .attr("class", "link")
+      .attr("d", d3.linkHorizontal()
+        .x(d => d.y)
+        .y(d => d.x));
+
+    const node = svg.selectAll(".node")
+      .data(root.descendants())
+      .enter()
+      .append("g")
+      .attr("class", "node")
+      .attr("transform", d => `translate(${d.y},${d.x})`);
+
+    node.append("circle")
+      .attr("r", 6);
+
+    node.append("text")
+      .attr("dy", 3)
+      .attr("x", d => d.children ? -10 : 10)
+      .style("text-anchor", d => d.children ? "end" : "start")
+      .text(d => d.data.name);
+  </script>
 </body>
 </html>
+
 
