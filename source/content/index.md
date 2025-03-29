@@ -54,7 +54,7 @@ Read more:
 [substack](https://open.substack.com/pub/karboncopy/p/the-bodys-beautiful-betrayal?r=1v7xyt&utm_campaign=post&utm_medium=web&showWelcomeOnShare=false)
 
 ## what im currently focused on
-"people rarely see past the end of thier nose" - to widen the lens.
+"people rarely see past the end of their nose" - to widen the lens.
 
 - novel concepts in art, expression and traditional institutions
 - emotional signaling - emotions as signals (like traffic lights). They tell you where a person is at. There are lots of different emotions, and trying to map signals are look going in circles.
