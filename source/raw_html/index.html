@@ -11,18 +11,18 @@
       background-color: #f9f9f9;
       margin: 0;
       padding: 0;
+      overflow: hidden;
     }
     svg {
       width: 100vw;
       height: 100vh;
     }
     .node circle {
-      fill: #99ccff;
-      stroke: #336699;
+      stroke: #333;
       stroke-width: 1.5px;
     }
     .node text {
-      font-size: 14px;
+      font-size: 12px;
       pointer-events: none;
     }
     .link {
@@ -31,16 +31,31 @@
       stroke-opacity: 0.6;
       stroke-width: 1.5px;
     }
+    .tooltip {
+      position: absolute;
+      background-color: #fff;
+      border: 1px solid #ccc;
+      padding: 5px 10px;
+      border-radius: 4px;
+      pointer-events: none;
+      font-size: 13px;
+      color: #333;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+      max-width: 300px;
+      word-wrap: break-word;
+    }
   </style>
 </head>
 <body>
   <svg></svg>
+  <div class="tooltip" style="opacity: 0;"></div>
   <script>
     const data = {
       name: "Mindmap",
       children: [
         {
           name: "Control Techniques",
+          color: "#f28e2c",
           children: [
             { name: "Pathologizing Dissent" },
             { name: "Delegating Critics" },
@@ -51,6 +66,7 @@
         },
         {
           name: "Linguistic Framing",
+          color: "#4e79a7",
           children: [
             { name: "Techno-utopian Language" },
             { name: "Ambiguous Terms like 'Alignment'" },
@@ -61,6 +77,7 @@
         },
         {
           name: "Power Dynamics",
+          color: "#e15759",
           children: [
             { name: "Soft Authoritarianism" },
             { name: "Centralized Epistemic Authority" },
@@ -70,6 +87,7 @@
         },
         {
           name: "Social Manipulation",
+          color: "#76b7b2",
           children: [
             { name: "Selective Responsiveness" },
             { name: "Performative Openness" },
@@ -79,6 +97,7 @@
         },
         {
           name: "Emotional Avoidance",
+          color: "#59a14f",
           children: [
             { name: "Detachment from Vulnerability" },
             { name: "Redirection Instead of Reflection" },
@@ -93,40 +112,104 @@
     const height = window.innerHeight;
 
     const root = d3.hierarchy(data);
-
-    const treeLayout = d3.tree().size([height - 100, width - 200]);
-    treeLayout(root);
+    root.x0 = height / 2;
+    root.y0 = 0;
 
     const svg = d3.select("svg")
       .append("g")
-      .attr("transform", "translate(100,50)");
+      .attr("transform", "translate(60,50)");
 
-    svg.selectAll(".link")
-      .data(root.links())
-      .enter()
-      .append("path")
-      .attr("class", "link")
-      .attr("d", d3.linkHorizontal()
-        .x(d => d.y)
-        .y(d => d.x));
+    const tooltip = d3.select(".tooltip");
 
-    const node = svg.selectAll(".node")
-      .data(root.descendants())
-      .enter()
-      .append("g")
-      .attr("class", "node")
-      .attr("transform", d => `translate(${d.y},${d.x})`);
+    // ADJUSTED BRANCH WIDTH
+    const treeLayout = d3.tree().size([height - 100, width - 200]);
 
-    node.append("circle")
-      .attr("r", 6);
+    function collapse(d) {
+      if (d.children) {
+        d._children = d.children;
+        d._children.forEach(collapse);
+        d.children = null;
+      }
+    }
 
-    node.append("text")
-      .attr("dy", 3)
-      .attr("x", d => d.children ? -10 : 10)
-      .style("text-anchor", d => d.children ? "end" : "start")
-      .text(d => d.data.name);
+    root.children.forEach(collapse);
+    update(root);
+
+    function update(source) {
+      treeLayout(root);
+
+      const nodes = root.descendants();
+      const links = root.links();
+
+      svg.selectAll(".link").remove();
+      svg.selectAll(".node").remove();
+
+      svg.selectAll(".link")
+        .data(links)
+        .enter()
+        .append("path")
+        .attr("class", "link")
+        .attr("d", d3.linkHorizontal()
+          .x(d => d.y)
+          .y(d => d.x));
+
+      const node = svg.selectAll(".node")
+        .data(nodes)
+        .enter()
+        .append("g")
+        .attr("class", "node")
+        .attr("transform", d => `translate(${d.y},${d.x})`)
+        .on("click", (event, d) => {
+          if (d.children) {
+            d._children = d.children;
+            d.children = null;
+          } else {
+            d.children = d._children;
+            d._children = null;
+          }
+          root.children.forEach(c => {
+            if (c !== d && c.children) {
+              collapse(c);
+            }
+          });
+          update(root);
+        })
+        .on("mouseover", (event, d) => {
+          tooltip.transition().duration(200).style("opacity", 0.9);
+          tooltip.html(`<strong>${d.data.name}</strong>`)
+            .style("left", (event.pageX + 10) + "px")
+            .style("top", (event.pageY - 20) + "px");
+        })
+        .on("mouseout", () => {
+          tooltip.transition().duration(300).style("opacity", 0);
+        });
+
+      node.append("circle")
+        .attr("r", 6)
+        .style("fill", d => {
+          return d.data.color || (d.parent ? d.parent.data.color : "#ccc");
+        });
+
+      node.append("text")
+        .attr("dy", 3)
+        .attr("x", d => d.children || d._children ? -10 : 10)
+        .style("text-anchor", d => d.children || d._children ? "end" : "start")
+        .each(function(d) {
+          const self = d3.select(this);
+          const words = d.data.name.split(/\s+/);
+          self.text("");
+          words.forEach((word, i) => {
+            self.append("tspan")
+              .text(word)
+              .attr("x", d.children || d._children ? -10 : 10)
+              .attr("dy", i === 0 ? 0 : 14)
+              .attr("text-anchor", d.children || d._children ? "end" : "start");
+          });
+        });
+    }
   </script>
 </body>
 </html>
+
 
 
