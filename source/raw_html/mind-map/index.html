@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mindmap of Group Dynamics</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.4/d3.min.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+    }
+    svg {
+      width: 100vw;
+      height: 100vh;
+    }
+    .node circle {
+      stroke: #333;
+      stroke-width: 1.5px;
+    }
+    .node text {
+      font-size: 12px;
+      pointer-events: none;
+    }
+    .link {
+      fill: none;
+      stroke: #999;
+      stroke-opacity: 0.6;
+      stroke-width: 1.5px;
+    }
+    .tooltip {
+      position: absolute;
+      background-color: #fff;
+      border: 1px solid #ccc;
+      padding: 5px 10px;
+      border-radius: 4px;
+      pointer-events: none;
+      font-size: 13px;
+      color: #333;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+      max-width: 300px;
+      word-wrap: break-word;
+    }
+  </style>
+</head>
+<body>
+  <svg></svg>
+  <div class="tooltip" style="opacity: 0;"></div>
+  <script>
+    const data = {
+      name: "Mindmap",
+      children: [
+        {
+          name: "Control Techniques",
+          color: "#f28e2c",
+          children: [
+            { name: "Pathologizing Dissent" },
+            { name: "Delegating Critics" },
+            { name: "Framing Objections as Misalignment" },
+            { name: "Over-intellectualizing Emotions" },
+            { name: "Withholding Emotional Engagement" }
+          ]
+        },
+        {
+          name: "Linguistic Framing",
+          color: "#4e79a7",
+          children: [
+            { name: "Techno-utopian Language" },
+            { name: "Ambiguous Terms like 'Alignment'" },
+            { name: "Reframing Coercion as 'Care'" },
+            { name: "Using Jargon to Deflect Critique" },
+            { name: "Minimizing Emotional Language" }
+          ]
+        },
+        {
+          name: "Power Dynamics",
+          color: "#e15759",
+          children: [
+            { name: "Soft Authoritarianism" },
+            { name: "Centralized Epistemic Authority" },
+            { name: "Gatekeeping via Jargon" },
+            { name: "Assumption of Moral/Intellectual Superiority" }
+          ]
+        },
+        {
+          name: "Social Manipulation",
+          color: "#76b7b2",
+          children: [
+            { name: "Selective Responsiveness" },
+            { name: "Performative Openness" },
+            { name: "Disempowering Autonomy via 'Optimized Systems'" },
+            { name: "Ignoring Ethical Questions" }
+          ]
+        },
+        {
+          name: "Emotional Avoidance",
+          color: "#59a14f",
+          children: [
+            { name: "Detachment from Vulnerability" },
+            { name: "Redirection Instead of Reflection" },
+            { name: "Devaluing Emotional Intelligence" },
+            { name: "Using Rationalism as a Shield" }
+          ]
+        }
+      ]
+    };
+
+    const width = window.innerWidth;
+    const height = window.innerHeight;
+
+    const root = d3.hierarchy(data);
+    root.x0 = height / 2;
+    root.y0 = 0;
+
+    const svg = d3.select("svg")
+      .append("g")
+      .attr("transform", "translate(60,50)");
+
+    const tooltip = d3.select(".tooltip");
+
+    // ADJUSTED BRANCH WIDTH
+    const treeLayout = d3.tree().size([height - 100, width - 200]);
+
+    function collapse(d) {
+      if (d.children) {
+        d._children = d.children;
+        d._children.forEach(collapse);
+        d.children = null;
+      }
+    }
+
+    root.children.forEach(collapse);
+    update(root);
+
+    function update(source) {
+      treeLayout(root);
+
+      const nodes = root.descendants();
+      const links = root.links();
+
+      svg.selectAll(".link").remove();
+      svg.selectAll(".node").remove();
+
+      svg.selectAll(".link")
+        .data(links)
+        .enter()
+        .append("path")
+        .attr("class", "link")
+        .attr("d", d3.linkHorizontal()
+          .x(d => d.y)
+          .y(d => d.x));
+
+      const node = svg.selectAll(".node")
+        .data(nodes)
+        .enter()
+        .append("g")
+        .attr("class", "node")
+        .attr("transform", d => `translate(${d.y},${d.x})`)
+        .on("click", (event, d) => {
+          if (d.children) {
+            d._children = d.children;
+            d.children = null;
+          } else {
+            d.children = d._children;
+            d._children = null;
+          }
+          root.children.forEach(c => {
+            if (c !== d && c.children) {
+              collapse(c);
+            }
+          });
+          update(root);
+        })
+        .on("mouseover", (event, d) => {
+          tooltip.transition().duration(200).style("opacity", 0.9);
+          tooltip.html(`<strong>${d.data.name}</strong>`)
+            .style("left", (event.pageX + 10) + "px")
+            .style("top", (event.pageY - 20) + "px");
+        })
+        .on("mouseout", () => {
+          tooltip.transition().duration(300).style("opacity", 0);
+        });
+
+      node.append("circle")
+        .attr("r", 6)
+        .style("fill", d => {
+          return d.data.color || (d.parent ? d.parent.data.color : "#ccc");
+        });
+
+      node.append("text")
+        .attr("dy", 3)
+        .attr("x", d => d.children || d._children ? -10 : 10)
+        .style("text-anchor", d => d.children || d._children ? "end" : "start")
+        .each(function(d) {
+          const self = d3.select(this);
+          const words = d.data.name.split(/\s+/);
+          self.text("");
+          words.forEach((word, i) => {
+            self.append("tspan")
+              .text(word)
+              .attr("x", d.children || d._children ? -10 : 10)
+              .attr("dy", i === 0 ? 0 : 14)
+              .attr("text-anchor", d.children || d._children ? "end" : "start");
+          });
+        });
+    }
+  </script>
+</body>
+</html>

@@ -1,3 +1,151 @@
 @use "./base.scss";
 
 // put your custom CSS here!
+/* 🎸 custom.scss — Orange Theme with VampireFreaks-Inspired Dark Mode */
+
+@import "variables";
+
+body {
+  background-color: #dcdcdc;
+  color: #111;
+  font-family: 'Verdana', sans-serif;
+  line-height: 1.6;
+}
+
+a {
+  color: #ff6600;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+a:hover {
+  color: #cc3300;
+  text-decoration: underline;
+}
+
+header, nav, .sidebar {
+  background-color: #f0f0f0;
+  border-bottom: 2px solid #ff6600;
+}
+
+nav a, .sidebar a {
+  color: #ff6600;
+}
+
+nav a:hover, .sidebar a:hover {
+  color: #cc3300;
+}
+
+.sidebar {
+  background-color: #f0f0f0;
+  border-right: 2px solid #ff6600;
+  padding: 1rem;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar li {
+  margin: 0.5rem 0;
+}
+
+.callout {
+  background-color: #eaeaea;
+  border-left: 4px solid #ff6600;
+  padding: 1rem;
+  margin: 1rem 0;
+}
+
+code, pre {
+  background-color: #eee;
+  color: #cc3300;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+}
+
+blockquote {
+  border-left: 4px solid #ff6600;
+  padding-left: 1rem;
+  color: #444;
+  font-style: italic;
+}
+
+/* Custom homepage grid/list styling (optional) */
+.page-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.page-list a {
+  display: block;
+  background-color: #f5f5f5;
+  padding: 1rem;
+  border: 1px solid #ff6600;
+  border-radius: 8px;
+  color: #ff6600;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.page-list a:hover {
+  background-color: #e0e0e0;
+  color: #000;
+  border-color: #cc3300;
+}
+
+/* 🦇 Dark Mode */
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #0a0a0a;
+    color: #e0e0e0;
+  }
+
+  header, nav, .sidebar {
+    background-color: #111;
+    border-bottom: 2px solid #ff6600;
+  }
+
+  nav a, .sidebar a {
+    color: #ff6600;
+  }
+
+  nav a:hover, .sidebar a:hover {
+    color: #ffaa00;
+  }
+
+  .sidebar {
+    background-color: #111;
+    border-right: 2px solid #ff6600;
+  }
+
+  .callout {
+    background-color: #1a1a1a;
+    border-left: 4px solid #ff6600;
+  }
+
+  code, pre {
+    background-color: #222;
+    color: #ffaa00;
+  }
+
+  blockquote {
+    border-left: 4px solid #ff6600;
+    color: #bbb;
+  }
+
+  .page-list a {
+    background-color: #111;
+    color: #ff6600;
+    border-color: #ff6600;
+  }
+
+  .page-list a:hover {
+    background-color: #1a1a1a;
+    color: #fff;
+    border-color: #ffaa00;
+  }
+}
