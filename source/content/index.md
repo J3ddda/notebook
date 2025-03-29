@@ -57,7 +57,7 @@ Read more:
 "people rarely see past the end of their nose" - to widen the lens.
 
 - novel concepts in art, expression and traditional institutions
-- emotional signaling - emotions as signals (like traffic lights). They tell you where a person is at. There are lots of different emotions, and trying to map signals are look going in circles.
+- emotional signaling - emotions as signals (like traffic lights). they tell you where your at. you can use this for self alignment.
 ## morals
 - tangable
 - alive
