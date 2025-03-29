@@ -1,17 +1,22 @@
-// Get post from URL like ?post=post1
-const params = new URLSearchParams(window.location.search);
-const postName = params.get("post") || "post1"; // default post
+  <script>
+  const toggleBtn = document.getElementById("theme-toggle");
 
-fetch(`posts/${postName}.md`)
-  .then(res => {
-    if (!res.ok) throw new Error("Post not found");
-    return res.text();
-  })
-  .then(md => {
-    const html = marked.parse(md);
-    document.getElementById("post-content").innerHTML = html;
-    document.getElementById("post-title").textContent = postName.replace(/-/g, " ");
-  })
-  .catch(err => {
-    document.getElementById("post-content").innerHTML = "<p>Couldn't find that entry in the void.</p>";
+  function setTheme(mode) {
+    document.documentElement.setAttribute("data-theme", mode);
+    localStorage.setItem("theme", mode);
+  }
+
+  // On load, apply stored or system theme
+  const savedTheme = localStorage.getItem("theme");
+  if (savedTheme) {
+    setTheme(savedTheme);
+  } else {
+    const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+    setTheme(prefersDark ? "dark" : "light");
+  }
+
+  toggleBtn.addEventListener("click", () => {
+    const current = document.documentElement.getAttribute("data-theme");
+    setTheme(current === "dark" ? "light" : "dark");
   });
+</script>
