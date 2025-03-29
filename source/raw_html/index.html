@@ -32,7 +32,7 @@
     }
 
     .main-content {
-      max-width: 900px;
+      max-width: auto;
       flex: 1;
       margin-right: 2rem;
     }
@@ -115,10 +115,17 @@
       transition: background 0.3s ease, border-color 0.3s ease;
     }
 
-    .sidebar {
-      width: 300px;
+      .sidebar {
+      width: auto%;
+      max-width: auto;
       padding: 1rem;
-      border-left: 1px solid var(--border-color);
+      border-top: 1px solid var(--border-color);
+      border-left: none;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      bottom: 0;
+      left: 0;
     }
 
     .sidebar h2 {
@@ -183,21 +190,17 @@
     </div>
 
     <div class="footer">
-      This is my ritual. I return to myself with each breath.
+      This is my ritual. I return to myself with each breath.   <a href="https://j3ddda.github.io/notebook/home">Open Obsidian notebook here</a>
     </div>
   </div>
-
-  <div class="sidebar">
-    <h2>Links</h2>
-    <a href="https://publish.obsidian.md/YOUR_PAGE_HERE" target="_blank">Open Obsidian</a>
-    <h2>Obsidian Graph</h2>
-    <iframe src="https://publish.obsidian.md/YOUR_GRAPH_PAGE_HERE"></iframe>
-  </div>
-
+  
   <script>
     function toggleDarkMode() {
       document.body.classList.toggle('dark-mode');
     }
   </script>
+
+
 </body>
 </html>
+
