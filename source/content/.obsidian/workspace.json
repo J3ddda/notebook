@@ -139,12 +139,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Sonic Alchemy.md",
+                "file": "index.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Sonic Alchemy"
+              "title": "index"
             }
           }
         ],
@@ -298,8 +298,9 @@
   },
   "active": "ef67d82d705a8c11",
   "lastOpenFiles": [
-    "emotions.md",
+    "hurt.md",
     "Sonic Alchemy.md",
+    "emotions.md",
     "edging.md",
     "index.md",
     "IRL cultural experiment.md",
@@ -321,7 +322,6 @@
     "heart.md",
     "heartache.md",
     "horny.md",
-    "hurt.md",
     "judgement.md",
     "love.md",
     "spirit",

@@ -45,16 +45,22 @@ Whats your ideal relationship? - open source
   
 <h1>How this research will help:</h1>
 - creates a sense of agency that allows people to speak up about injustices in a safe and productive way (the thing stopping you from speaking up might be mostly fear of being reprimanded?, or fear the thing thats happening is gunna happen to you?, but when we speak up, we notice we arnt alone, we tend to outnumber those who hide in shame 10-1*not actual data but id like to see that data one day possibly*)
+
 - help ease the pressure of doctors and the wait time to see said doctors especially in ER hospital as people will *know* if they are sick or just feeling intense emotions.
+
 - you get to know the position of your mind and your body (win-win), if people trust their body there will automatically be trust in life (and others) as a fix/alignment in one area often causes compounding in all areas (memetics)
 
 Read more:  
 [substack](https://open.substack.com/pub/karboncopy/p/the-bodys-beautiful-betrayal?r=1v7xyt&utm_campaign=post&utm_medium=web&showWelcomeOnShare=false)
 
+## what im currently focused on
+"people rarely see past the end of thier nose" - to widen the lens.
+- novel concepts in art, expression and traditional institutions
+- emotional signaling - emotions as signals (like traffic lights). They tell you where a person is at. There are lots of different emotions, and trying to map signals are look going in circles.
 ## morals
 - tangable
 - alive
-- changing
 - respectful
+- consentual
 <br>
 
