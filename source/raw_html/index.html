@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Ritual of Return</title>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-color: #fdfcf9;
+      --text-color: #333;
+      --border-color: #ccc;
+      --input-bg: #fdfcf9;
+    }
+
+    body.dark-mode {
+      --bg-color: #1a1a1a;
+      --text-color: #f5f5f5;
+      --border-color: #444;
+      --input-bg: #2a2a2a;
+    }
+
+    body {
+      font-family: 'EB Garamond', serif;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      margin: 0;
+      padding: 2rem;
+      line-height: 1.7;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+      transition: background-color 0.5s ease, color 0.5s ease;
+    }
+
+    h1, h2 {
+      font-weight: normal;
+    }
+
+    h1 {
+      font-size: 2.4rem;
+      margin-bottom: 1rem;
+    }
+
+    h2 {
+      font-size: 1.6rem;
+      margin-top: 2rem;
+    }
+
+    .section {
+      margin-bottom: 2.5rem;
+    }
+
+    textarea {
+      width: 100%;
+      height: 120px;
+      padding: 0.8rem;
+      font-family: 'EB Garamond', serif;
+      font-size: 1rem;
+      border: 1px solid var(--border-color);
+      background: var(--input-bg);
+      color: var(--text-color);
+      resize: vertical;
+      transition: background 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+    }
+
+    .footer {
+      margin-top: 4rem;
+      font-size: 0.9rem;
+      color: var(--text-color);
+      transition: color 0.3s ease;
+    }
+
+    .toggle-container {
+      text-align: right;
+      margin-bottom: 1rem;
+    }
+
+    .toggle-button {
+      background: none;
+      border: 1px solid var(--border-color);
+      padding: 0.3rem 0.8rem;
+      font-family: 'EB Garamond', serif;
+      font-size: 1rem;
+      cursor: pointer;
+      color: var(--text-color);
+      background-color: var(--input-bg);
+      transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+    }
+  </style>
+</head>
+<body>
+  <div class="toggle-container">
+    <button class="toggle-button" onclick="toggleDarkMode()">Toggle Dark Mode</button>
+  </div>
+
+  <h1>The Ritual of Return</h1>
+  <p><em>A daily journal to remember, re-center, and rehumanize myself.</em></p>
+
+  <div class="section">
+    <h2>1. How I Feel Today (Name it to claim it)</h2>
+    <textarea placeholder="Emotions: Tender, overwhelmed, hopeful..."></textarea>
+    <textarea placeholder="Felt in my body: heavy chest, warm throat..."></textarea>
+  </div>
+
+  <div class="section">
+    <h2>2. What Pulled Me Off-Center (If anything)</h2>
+    <textarea placeholder="A conversation, silence, or moment that caused disconnection..."></textarea>
+    <textarea placeholder="Did I abandon myself? What did I feel?"></textarea>
+  </div>
+
+  <div class="section">
+    <h2>3. What Brought Me Back (Or what I wish would)</h2>
+    <textarea placeholder="A breath, a truth, a grounding action..."></textarea>
+    <textarea placeholder="Today’s anchor: I am allowed to feel deeply without shame..."></textarea>
+  </div>
+
+  <div class="section">
+    <h2>4. My Values in Action</h2>
+    <textarea placeholder="Where did I honour my values today?"></textarea>
+    <textarea placeholder="Where did I forget—and how can I come back to them?"></textarea>
+  </div>
+
+  <div class="section">
+    <h2>5. What I Want to Remember</h2>
+    <textarea placeholder="Dear future me, remember..."></textarea>
+  </div>
+
+  <div class="section">
+    <h2>6. One Person (Real or Imagined) I Carry With Me</h2>
+    <textarea placeholder="Today, I carry _______ with me..."></textarea>
+  </div>
+
+  <div class="footer">
+    This is my ritual. I return to myself with each breath.
+  </div>
+
+  <script>
+    function toggleDarkMode() {
+      document.body.classList.toggle('dark-mode');
+    }
+  </script>
+</body>
+</html>
