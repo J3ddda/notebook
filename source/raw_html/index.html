@@ -27,10 +27,14 @@
       margin: 0;
       padding: 2rem;
       line-height: 1.7;
-      max-width: 1200px;
-      margin-left: auto;
-      margin-right: auto;
+      display: flex;
       transition: background-color 0.5s ease, color 0.5s ease;
+    }
+
+    .main-content {
+      max-width: 900px;
+      flex: 1;
+      margin-right: 2rem;
     }
 
     h1, h2, h3 {
@@ -110,50 +114,84 @@
       background: var(--input-bg);
       transition: background 0.3s ease, border-color 0.3s ease;
     }
+
+    .sidebar {
+      width: 300px;
+      padding: 1rem;
+      border-left: 1px solid var(--border-color);
+    }
+
+    .sidebar h2 {
+      font-size: 1.2rem;
+      margin-top: 0;
+    }
+
+    .sidebar a {
+      color: var(--text-color);
+      text-decoration: none;
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+
+    iframe {
+      width: 100%;
+      height: 300px;
+      border: 1px solid var(--border-color);
+      background: #fff;
+    }
   </style>
 </head>
 <body>
-  <div class="toggle-container">
-    <button class="toggle-button" onclick="toggleDarkMode()">Toggle Dark Mode</button>
+  <div class="main-content">
+    <div class="toggle-container">
+      <button class="toggle-button" onclick="toggleDarkMode()">Toggle Dark Mode</button>
+    </div>
+
+    <h1>The Ritual of Return</h1>
+    <p><em>A daily journal to remember, re-center, and rehumanize myself.</em></p>
+
+    <div class="value-list">
+      <h2>My Living Values</h2>
+      <div class="value-item">
+        <h3>Emotional Integrity</h3>
+        <p>I honor the truth of my feelings, even when they are inconvenient. I believe emotions are intelligent, not irrational.</p>
+      </div>
+      <div class="value-item">
+        <h3>Self-Remembrance</h3>
+        <p>I return to myself daily, not because I’m lost—but because the world tries to make me forget who I am.</p>
+      </div>
+      <div class="value-item">
+        <h3>Mutual Respect</h3>
+        <p>I do not force others to understand me, nor do I allow myself to be diminished. All real connection begins with respect.</p>
+      </div>
+      <div class="value-item">
+        <h3>Radical Curiosity</h3>
+        <p>I let questions breathe. I do not rush to closure. I believe confusion is a form of clarity in motion.</p>
+      </div>
+      <div class="value-item">
+        <h3>Embodied Wisdom</h3>
+        <p>I trust my body’s knowing. What I feel in my chest, gut, and breath is not noise—it’s guidance.</p>
+      </div>
+      <div class="value-item">
+        <h3>Boundaried Openness</h3>
+        <p>I am open—but not porous. I listen deeply, but I do not betray myself to keep peace.</p>
+      </div>
+      <div class="value-item">
+        <h3>Creative Sovereignty</h3>
+        <p>My ideas, words, and insights are mine to shape, not mine to surrender for approval or belonging.</p>
+      </div>
+    </div>
+
+    <div class="footer">
+      This is my ritual. I return to myself with each breath.
+    </div>
   </div>
 
-  <h1>The Ritual of Return</h1>
-  <p><em>A daily journal to remember, re-center, and rehumanize myself.</em></p>
-
-  <div class="value-list">
-    <h2>My Living Values</h2>
-    <div class="value-item">
-      <h3>Emotional Integrity</h3>
-      <p>I honor the truth of my feelings, even when they are inconvenient. I believe emotions are intelligent, not irrational.</p>
-    </div>
-    <div class="value-item">
-      <h3>Self-Remembrance</h3>
-      <p>I return to myself daily, not because I’m lost—but because the world tries to make me forget who I am.</p>
-    </div>
-    <div class="value-item">
-      <h3>Mutual Respect</h3>
-      <p>I do not force others to understand me, nor do I allow myself to be diminished. All real connection begins with respect.</p>
-    </div>
-    <div class="value-item">
-      <h3>Radical Curiosity</h3>
-      <p>I let questions breathe. I do not rush to closure. I believe confusion is a form of clarity in motion.</p>
-    </div>
-    <div class="value-item">
-      <h3>Embodied Wisdom</h3>
-      <p>I trust my body’s knowing. What I feel in my chest, gut, and breath is not noise—it’s guidance.</p>
-    </div>
-    <div class="value-item">
-      <h3>Boundaried Openness</h3>
-      <p>I am open—but not porous. I listen deeply, but I do not betray myself to keep peace.</p>
-    </div>
-    <div class="value-item">
-      <h3>Creative Sovereignty</h3>
-      <p>My ideas, words, and insights are mine to shape, not mine to surrender for approval or belonging.</p>
-    </div>
-  </div>
-
-  <div class="footer">
-    This is my ritual. I return to myself with each breath.
+  <div class="sidebar">
+    <h2>Links</h2>
+    <a href="https://publish.obsidian.md/YOUR_PAGE_HERE" target="_blank">Open Obsidian</a>
+    <h2>Obsidian Graph</h2>
+    <iframe src="https://publish.obsidian.md/YOUR_GRAPH_PAGE_HERE"></iframe>
   </div>
 
   <script>
