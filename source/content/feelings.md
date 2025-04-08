@@ -3,8 +3,6 @@
 im not a lier, im just ashamed (they say while filled with shame)
 
 
-if am squishy, you cant stab squishy.
-
 
 ## sticky;
 "my feelings have changed but i know its going to hurt them, argh. I might just ignore my feelings and hope they go away or change, maybe im just being silly)"
