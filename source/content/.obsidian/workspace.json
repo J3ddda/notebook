@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "embodiment (how to self-align).md",
+                "file": "feelings.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "embodiment (how to self-align)"
+              "title": "feelings"
             }
           }
         ]
@@ -171,10 +171,10 @@
   },
   "active": "f9dbf9a8b681eb12",
   "lastOpenFiles": [
+    "embodiment (how to self-align).md",
     "home.md",
     "Untitled.md",
     "feelings.md",
-    "embodiment (how to self-align).md",
     "hurt.md",
     "Sonic Alchemy.md",
     "emotions.md",
