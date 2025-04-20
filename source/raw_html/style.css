@@ -189,6 +189,12 @@ blockquote {
     border-bottom: 1px solid transparent;
   }
 
+  .page-title {
+    margin: 0;
+    font-size: 1.75rem;
+    display: none;
+}
+
   .sidebar a {
     color: #66ccff;
   }
