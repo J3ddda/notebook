@@ -223,7 +223,7 @@ blockquote {
 
   a {
     color: #66ccff;
-    border-bottom: 1px solid #66ccff;
+    border-bottom: 0px solid #66ccff;
   }
 
   a:hover {
