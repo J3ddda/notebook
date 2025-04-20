@@ -9,7 +9,7 @@
     background-color: #ffffff;
     color: #222222;
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    font-size: 1rem;
+    font-size: 8px;
     line-height: 1.7;
     margin: 0;
     padding: 0;
@@ -18,7 +18,7 @@
     
     header {
       background-color: #dcdcdc;
-      padding: 1rem;
+      padding: 4px;
       text-align: center;
       border-bottom: 2px solid #494949;
     }
@@ -26,7 +26,7 @@
     header h1 {
       color: #ccc;
       margin: 0;
-      font-size: 1.8rem;
+      font-size: 24px;
     }
     
     nav {
@@ -49,6 +49,12 @@
       width: 1000px;
       margin: 2rem auto;
     }
+
+    .page-title {
+      margin: 0;
+      font-size: 1.75rem;
+      display: none;
+  }
     
     .sidebar {
       width: 200px;
