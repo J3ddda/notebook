@@ -35,7 +35,7 @@
     
     nav a {
       margin: 0 1rem;
-      color: #5200a4;
+      color: #dcdcdc;
       text-decoration: none;
       font-weight: bold;
     }
@@ -60,7 +60,7 @@
       width: 200px;
       background-color: transparent;
       padding: 1rem;
-      border-right: 2px solid #bfbfbf;
+      border-right: 0px solid #bfbfbf;
     }
     
     .sidebar ul {
@@ -86,18 +86,18 @@
       flex: 1;
       padding: 2rem;
       background-color: transparent;
-      border-left: 2px solid #a1a1a1;
+      border-left: 0px solid #a1a1a1;
     }
   
   a {
-    color: #007acc;
+    color: #486476;
     text-decoration: none;
     border-bottom: 1px solid transparent;
     transition: border 0.2s ease;
   }
   
   a:hover {
-     border-bottom: 1px solid transparent;
+     border-bottom: 1px solid #1c3258;
   }
   
   /* Layout */
