@@ -1,1 +1,0 @@
-my housemates perfume turns me on so fucking much. not him, just the way he smells, but also him by association? wtf.

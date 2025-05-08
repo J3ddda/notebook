@@ -9,7 +9,7 @@ You decide you have two choices:<br>
 - ill let them know, theyll respect me <br>
 
 you decide to go the latter option, letting them know that this week, youd rather save money on food than getting drunk and feeling hungover. you were honest and they said, "yeah man dont worry about it, completely understand". Cool, this might now be an indicator of respect. you feel good. you go on living your life <br>
-This happens a few times bc either youre busy (life comes up yo) or you make the concious choice to not go based on personal situations. you tell them honestly and they say the same thing,  "yeah man dont worry about it, completely understand". <br>
+This happens a few times bc either youre busy (life comes up yo) or you make the conscious choice to not go based on personal situations. you tell them honestly and they say the same thing,  "yeah man dont worry about it, completely understand". <br>
 Then one day, you realise that youve got the weekend off! -awesome- but there was no invite? so you reach out to your friends, they mention theyre going out, but didnt reach out, *(you mind starts to spiral, why didnt they invite me? you think to yourself, why did i get left out?)* they invite you but you feel this *weird fooling*. You question why they didnt ask you to come, their response is "well you kept saying no, so we just stopped asking" - this happens alot and is a normal response in social interactions. (i want to stress that this type of dynamic is normal)
 This may be nothing but it also might be taken as a personal attack. 
 Lets take a deeper look at the response and how it might be taken in different contexts.
